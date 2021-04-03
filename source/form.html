@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Подбор Программы</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
 </head>
 
 <body class="page__body form-page__body">
@@ -33,7 +35,7 @@
     </div>
   </header>
 
-  <main class="page-main form-page__main">
+  <main class="page-main form-page__main container">
 
     <form class="form-page__form" action="https://echo.htmlacademy.ru">
 
@@ -42,16 +44,16 @@
         <p class="selection__tagline">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <ul class="selection__bio-list">
           <li class="selection__bio-item">
-            <label for="form-name">Имя:*</label>
             <input class="form-input" type="text" name="bio-name" id="form-name" placeholder="Барсик">
+            <label for="form-name">Имя:*</label>
           </li>
           <li class="selection__bio-item">
-            <label for="form-weight">Вес (кг):*</label>
             <input class="form-input" type="number" name="bio-weight" id="form-weight" placeholder="7">
+            <label for="form-weight">Вес (кг):*</label>
           </li>
           <li class="selection__bio-item">
-            <label for="form-age">Возраст (лет):*</label>
             <input class="form-input" type="number" name="bio-age" id="form-age" placeholder="7">
+            <label for="form-age">Возраст (лет):*</label>
           </li>
         </ul>
         <ul class="selection__choice-list">
@@ -74,12 +76,12 @@
         <h2 class="subtitle">Контактные данные (владельца кота)</h2>
         <ul class="form-contacts__list">
           <li class="form-contacts__item">
-            <label for="email">e-mail:*</label>
             <input class="form-input" type="email" name="email" id="email" placeholder="кuklachev@gmail.com">
+            <label for="email">e-mail:*</label>
           </li>
           <li class="form-contacts__item">
-            <label for="phone">Телефон:*</label>
             <input class="form-input" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90">
+            <label for="phone">Телефон:*</label>
           </li>
         </ul>
       </section>
@@ -93,25 +95,25 @@
         <h2 class="subtitle">Дополнительно</h2>
         <ul class="extra__list">
           <li class="extra__item">
-            <input class="form-checkbox" type="checkbox" name="sugarless" id="checkbox-sugarless" checked>
+            <input class="form-input form-checkbox" type="checkbox" name="sugarless" id="checkbox-sugarless" checked>
             <label for="checkbox-sugarless">Сахарозаменитель</label>
           </li>
           <li class="extra__item">
-            <input class="form-checkbox" type="checkbox" name="milk" id="checkbox-milk">
+            <input class="form-input form-checkbox" type="checkbox" name="milk" id="checkbox-milk">
             <label for="checkbox-milk">Молоко</label>
           </li>
           <li class="extra__item">
-            <input class="form-checkbox" type="checkbox" name="water" id="checkbox-water">
+            <input class="form-input form-checkbox" type="checkbox" name="water" id="checkbox-water">
             <label for="checkbox-water">Питьевая вода</label>
           </li>
           <li class="extra__item">
-            <input class="form-checkbox" type="checkbox" name="vitamin" id="checkbox-vitamin">
+            <input class="form-input form-checkbox" type="checkbox" name="vitamin" id="checkbox-vitamin">
             <label for="checkbox-vitamin">Витамины</label>
           </li>
         </ul>
       </section>
 
-      <button type="submit">Отправить заявку</button>
+      <button class="button" type="submit">Отправить заявку</button>
       <p class="form-page__required">* — Обязательные поля</p>
     </form>
 
@@ -133,11 +135,11 @@
       <h2 class="visually-hidden">Карта</h2>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003192!2d30.320858716217955!3d59.93871916905404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616792370822!5m2!1sru!2sru"
-        width="1440" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+        width="1440" height="400" allowfullscreen="" loading="lazy">
       </iframe>
     </section>
 
-    <section class="social">
+    <section class="social container">
       <h2 class="visually-hidden">Соц-сети</h2>
       <div class="social__footer-logo footer-logo">
         <a>

@@ -4,6 +4,6 @@
 }
 
 .selection__tagline {
-  font-family: "Oswald", sans-serif;
+  @include oswald();
   text-transform: uppercase;
 }

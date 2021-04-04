@@ -1,6 +1,4 @@
 .subtitle {
-  font-family: "Oswald", sans-serif;
+  @include oswald(36px, 36px);
   font-weight: 400;
-  font-size: 36px;
-  line-height: 36px;
 }

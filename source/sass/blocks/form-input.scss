@@ -1,7 +1,8 @@
 .form-input {
-  & + label,
+
+  &+label,
   &::placeholder {
-    font-family: "Oswald", sans-serif;
+    @include oswald();
     text-transform: uppercase;
     color: $special_dark-grey;
   }

@@ -1,9 +1,9 @@
-.example {
-  outline: red 2.5px solid;
-}
-
 .example__wrapper {
   background-color: $basic_grey;
+}
+
+.example__wrapper .container {
+  outline: red 2.5px solid;
 }
 
 .example__info {
@@ -14,13 +14,13 @@
   th {
     font-family: "Oswald", sans-serif;
     font-weight: 400;
-    font-size: 30px;
-    line-height: 37px;
+    font-size: 24px;
+    line-height: 24px;
   }
 
   td {
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 12px;
+    line-height: 12px;
     color: $special_dark_grey;
   }
 }
@@ -28,7 +28,6 @@
 .example__cost,
 .example__price {
   font-family: "Oswald", sans-serif;
-  font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
 }

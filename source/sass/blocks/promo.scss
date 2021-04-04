@@ -18,16 +18,13 @@
 }
 
 .promo__title {
-  font-family: "Oswald", sans-serif;
+  @include oswald(36px, 40px);
   font-weight: 400;
-  font-size: 36px;
-  line-height: 40px;
   color: $basic_white;
 }
 
 .promo__tagline {
-  font-family: "Oswald", sans-serif;
-  line-height: 14px;
+  @include oswald(14px, 14px);
   text-transform: uppercase;
   color: $basic_white;
 }

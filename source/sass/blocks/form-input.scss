@@ -1,6 +1,5 @@
 .form-input {
-
-  &+label,
+  & + label,
   &::placeholder {
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;

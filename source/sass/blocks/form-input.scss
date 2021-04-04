@@ -1,6 +1,5 @@
 .form-input {
-
-  &+label,
+  & + label,
   &::placeholder {
     @include oswald();
     text-transform: uppercase;

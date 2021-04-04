@@ -1,5 +1,5 @@
 .form-checkbox {
-  &+label {
+  & + label {
     color: $basic_black;
   }
 }

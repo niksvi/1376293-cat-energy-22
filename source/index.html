@@ -3,15 +3,17 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
 </head>
 
 <body class="page__body">
 
   <div class="header-wrapper">
-    <header class="page-header container">
-      <div class="page-header__wrapper">
+    <header class="page-header">
+      <div class="page-header__wrapper container">
         <a class="page-header__logo">
           <img src="img/content/logo-mobile.svg" width="33" height="38"
             alt="Логотип сайта с изображением кота супер-героя">
@@ -35,11 +37,13 @@
       </div>
 
       <section class="promo">
-        <h1 class="main-title">Функциональное питание для котов</h1>
-        <p class="promo__tagline">Занялся собой? Займись котом!</p>
-        <a class="button" href="#">Подобрать программу</a>
-        <img class="promo__image" src="img/content/index-can.png" width="280" height="270"
-          alt="Пластиковая банка оранжевого цвета 500г">
+        <div class="promo__wrapper container">
+          <h1 class="promo__title">Функциональное питание для котов</h1>
+          <p class="promo__tagline">Занялся собой? Займись котом!</p>
+          <img class="promo__image" src="img/content/index-can.png" width="280" height="270"
+            alt="Пластиковая банка оранжевого цвета 500г">
+          <a class="button" href="#">Подобрать программу</a>
+        </div>
       </section>
     </header>
   </div>
@@ -75,9 +79,9 @@
     </section>
 
     <section class="example">
-      <h2 class="main-title container">Живой пример</h2>
       <div class="example__wrapper">
         <div class="container">
+          <h2 class="main-title ">Живой пример</h2>
           <p class="example__info">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
             Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
             часов
@@ -124,7 +128,7 @@
       <h2 class="visually-hidden">Карта</h2>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003192!2d30.320858716217955!3d59.93871916905404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616792370822!5m2!1sru!2sru"
-        width="1440" height="400" allowfullscreen="" loading="lazy">
+        width="1440" height="362" allowfullscreen="" loading="lazy">
       </iframe>
     </section>
 

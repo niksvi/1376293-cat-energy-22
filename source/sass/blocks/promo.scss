@@ -1,10 +1,33 @@
 .promo {
-  margin-bottom: 80px;
+  margin-bottom: 22px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $basic_green;
+    opacity: 0.85;
+    width: 100%;
+    height: 302px;
+    z-index: -1;
+  }
+}
+
+.promo__wrapper {
+  outline: red 2.5px solid;
+}
+
+.promo__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: $basic_white;
 }
 
 .promo__tagline {
   font-family: "Oswald", sans-serif;
-  font-size: 20px;
-  line-height: 20px;
+  line-height: 14px;
   text-transform: uppercase;
+  color: $basic_white;
 }

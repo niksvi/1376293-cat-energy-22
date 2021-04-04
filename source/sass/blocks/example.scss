@@ -12,10 +12,8 @@
 
 .example__stats {
   th {
-    font-family: "Oswald", sans-serif;
+    @include oswald(24px, 24px);
     font-weight: 400;
-    font-size: 24px;
-    line-height: 24px;
   }
 
   td {
@@ -27,7 +25,6 @@
 
 .example__cost,
 .example__price {
-  font-family: "Oswald", sans-serif;
-  line-height: 20px;
+  @include oswald(14px, 20px);
   text-transform: uppercase;
 }

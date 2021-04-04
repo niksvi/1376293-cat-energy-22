@@ -4,3 +4,9 @@ $basic_white : #ffffff;
 $basic_black : #000000;
 $special_black : #111111;
 $special_dark-grey: #444444;
+
+@mixin oswald($font_size, $line_height : 18px) {
+  font-family: "Oswald", sans-serif;
+  font-size: $font_size;
+  line-height: $line_height;
+}

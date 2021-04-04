@@ -3,9 +3,7 @@
 }
 
 .contacts__tagline {
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
+  @include oswald(16px);
   text-transform: uppercase;
   color: $special_black;
 }

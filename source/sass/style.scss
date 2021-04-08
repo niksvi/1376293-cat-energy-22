@@ -1,6 +1,9 @@
+// helper
+
 @import "veriables.scss";
 @import "global.scss";
 @import "fonts.scss";
+
 //
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
@@ -14,3 +17,13 @@
 @import "blocks/map.scss";
 @import "blocks/social.scss";
 @import "blocks/copyright.scss";
+
+//form
+
+@import "blocks/selection.scss";
+@import "blocks/form-input.scss";
+@import "blocks/form-radio.scss";
+@import "blocks/form-checkbox.scss";
+@import "blocks/form-contacts.scss";
+@import "blocks/comment.scss";
+@import "blocks/extra.scss";

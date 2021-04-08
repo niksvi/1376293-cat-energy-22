@@ -4,6 +4,7 @@ $basic_white : #ffffff;
 $basic_black : #000000;
 $special_black : #111111;
 $special_dark-grey: #444444;
+$special_dark-grey-2: #222222;
 
 @mixin oswald($font_size : 14px, $line_height : 18px) {
   font-family: "Oswald", sans-serif;

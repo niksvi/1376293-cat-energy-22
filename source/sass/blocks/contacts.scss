@@ -1,0 +1,15 @@
+.contacts {
+  outline: red 2.5px solid;
+}
+
+.contacts__tagline {
+  @include oswald(16px);
+  text-transform: uppercase;
+  color: $special_black;
+}
+
+.contacts__address {
+  line-height: 20px;
+  font-style: normal;
+  color: $special_dark_grey;
+}

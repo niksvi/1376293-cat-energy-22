@@ -1,1 +1,16 @@
-// Начните писать стили здесь
+@import "veriables.scss";
+@import "global.scss";
+@import "fonts.scss";
+//
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/main-title.scss";
+@import "blocks/promo.scss";
+@import "blocks/button.scss";
+@import "blocks/features.scss";
+@import "blocks/order.scss";
+@import "blocks/example.scss";
+@import "blocks/contacts.scss";
+@import "blocks/map.scss";
+@import "blocks/social.scss";
+@import "blocks/copyright.scss";

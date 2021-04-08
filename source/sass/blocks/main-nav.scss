@@ -1,0 +1,6 @@
+.main-nav__item a {
+  @include oswald(20px);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $basic_black;
+}

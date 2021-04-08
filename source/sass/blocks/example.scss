@@ -1,0 +1,30 @@
+.example__wrapper {
+  background-color: $basic_grey;
+}
+
+.example__wrapper .container {
+  outline: red 2.5px solid;
+}
+
+.example__info {
+  color: $special_dark_grey;
+}
+
+.example__stats {
+  th {
+    @include oswald(24px, 24px);
+    font-weight: 400;
+  }
+
+  td {
+    font-size: 12px;
+    line-height: 12px;
+    color: $special_dark_grey;
+  }
+}
+
+.example__cost,
+.example__price {
+  @include oswald(14px, 20px);
+  text-transform: uppercase;
+}

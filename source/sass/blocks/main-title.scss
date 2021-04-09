@@ -1,4 +1,8 @@
 .main-title {
   @include oswald(36px, 40px);
   font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    @include oswald(60px, 60px);
+  }
 }

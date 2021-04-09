@@ -3,18 +3,46 @@
   margin-bottom: 27px;
 }
 
+.features__list {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
 .features__item {
   background-color: $basic_grey;
+
+  @media (min-width: $desktop-width) {
+    &:nth-child(odd) {
+      margin-right: 80px;
+    }
+  }
 }
 
 .features__title {
   @include oswald(24px, 36px);
   font-weight: 400;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include oswald(36px, 36px);
+  }
+}
+
+.features__info {
+  color: $special_dark-grey;
+
+  @media (min-width: $tablet-width) {
+    color: $basic_black;
+  }
 }
 
 .features__link {
   @include oswald(16px, 16px);
   text-transform: uppercase;
   color: $basic_black;
+
+  @media (min-width: $tablet-width) {
+    @include oswald(20px, 30px);
+  }
 }

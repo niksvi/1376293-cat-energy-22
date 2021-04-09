@@ -1,15 +1,31 @@
 .contacts {
   outline: red 2.5px solid;
+  background-color: $basic_white;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    left: calc(50% - 1220px / 2);
+    top: 100px;
+    width: 300px;
+  }
 }
 
 .contacts__tagline {
   @include oswald(16px);
   text-transform: uppercase;
   color: $special_black;
+
+  @media (min-width: $tablet-width) {
+    @include oswald(20px, 21px);
+  }
 }
 
 .contacts__address {
   line-height: 20px;
   font-style: normal;
   color: $special_dark_grey;
+
+  @media (min-width: $tablet-width) {
+    @include oswald(16px, 20px);
+  }
 }

@@ -1,0 +1,15 @@
+.add-goods {
+  outline: red 2.5px solid;
+}
+
+.add-goods__title {
+  @include oswald(16px, 16px);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $special_dark-grey-2;
+}
+
+.add-goods__quantity,
+.add-goods__price {
+  color: $special_dark-grey;
+}

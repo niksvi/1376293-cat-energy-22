@@ -3,4 +3,9 @@
   text-transform: uppercase;
   color: $basic_white;
   background-color: $basic_green;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    @include oswald(20px, 20px);
+  }
 }

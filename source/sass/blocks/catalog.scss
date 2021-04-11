@@ -1,0 +1,30 @@
+.catalog {
+  outline: red 2.5px solid;
+}
+
+.catalog__title {
+  @include oswald(16px, 20px);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $special_dark-grey-2;
+}
+
+.catalog__table {
+  th,
+  td {
+    @include oswald(12px, 16px);
+    color: $special_dark-grey;
+  }
+}
+
+.catalog__info {
+  @include oswald(12px, 16px);
+  color: $special_dark-grey;
+}
+
+.catalog__button {
+  &--more {
+    background-color: $basic_grey;
+    color: $special_dark-grey;
+  }
+}

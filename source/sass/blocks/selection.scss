@@ -1,0 +1,9 @@
+.selection {
+  outline: red 2.5px solid;
+  margin-bottom: 50px;
+}
+
+.selection__tagline {
+  @include oswald();
+  text-transform: uppercase;
+}

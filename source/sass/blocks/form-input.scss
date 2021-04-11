@@ -1,0 +1,8 @@
+.form-input {
+  & + label,
+  &::placeholder {
+    @include oswald();
+    text-transform: uppercase;
+    color: $special_dark-grey;
+  }
+}

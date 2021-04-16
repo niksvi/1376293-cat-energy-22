@@ -15,6 +15,12 @@
   }
 }
 
+.main-nav__item--form-page a {
+  @media (min-width: $desktop-width) {
+    color: $special_black;
+  }
+}
+
 .main-nav__toggle {
   @media (min-width: $tablet-width) {
     display: none;

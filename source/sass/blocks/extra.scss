@@ -2,3 +2,26 @@
   outline: red 2.5px solid;
   margin-bottom: 60px;
 }
+
+.extra__list {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.extra__item:nth-child(2) {
+  @media (min-width: $tablet-width) {
+    order: 1;
+  }
+}
+
+.extra__item:nth-child(4) {
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
+}

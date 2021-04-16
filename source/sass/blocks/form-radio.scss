@@ -1,3 +1,5 @@
 .form-radio {
-  color: $special_dark-grey-2;
+  & + label {
+    color: $special_dark-grey-2;
+  }
 }

@@ -2,14 +2,57 @@
   outline: red 2.5px solid;
 }
 
+.add-goods__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.add-goods__item {
+  display: grid;
+  grid-template-areas:
+    "t t"
+    "q p"
+    "b b";
+
+  @media (min-width: $tablet-width) {
+    grid-template-areas:
+      "t q p"
+      "b b b";
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-areas: "t q p b";
+  }
+}
+
 .add-goods__title {
   @include oswald(16px, 16px);
   font-weight: 400;
   text-transform: uppercase;
   color: $special_dark-grey-2;
+
+  grid-area: t;
+
+  @media (min-width: $tablet-width) {
+    @include oswald(20px, 20px);
+  }
 }
 
 .add-goods__quantity,
 .add-goods__price {
   color: $special_dark-grey;
+}
+
+.add-goods__quantity {
+  grid-area: q;
+}
+
+.add-goods__price {
+  grid-area: p;
+}
+
+.add-goods__button {
+  grid-area: b;
 }

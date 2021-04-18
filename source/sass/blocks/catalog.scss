@@ -2,11 +2,45 @@
   outline: red 2.5px solid;
 }
 
+.catalog__list {
+  display: grid;
+  gap: 19px 0;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 324px);
+    gap: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 245px);
+    gap: 63px 80px;
+  }
+}
+
 .catalog__title {
   @include oswald(16px, 20px);
   font-weight: 400;
   text-transform: uppercase;
   color: $special_dark-grey-2;
+
+  @media (min-width: $tablet-width) {
+    @include oswald(20px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include oswald(20px, 21px);
+  }
+
+  &--last-item {
+    @include oswald(16px, 20px);
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $special-black;
+
+    @media (min-width: $tablet-width) {
+      @include oswald(20px, 22px);
+    }
+  }
 }
 
 .catalog__table {
@@ -14,12 +48,20 @@
   td {
     @include oswald(12px, 16px);
     color: $special_dark-grey;
+
+    @media (min-width: $tablet-width) {
+      @include oswald(16px,16px);
+    }
   }
 }
 
 .catalog__info {
   @include oswald(12px, 16px);
   color: $special_dark-grey;
+
+  @media (min-width: $tablet-width) {
+    @include oswald(16px, 18px);
+  }
 }
 
 .catalog__button {

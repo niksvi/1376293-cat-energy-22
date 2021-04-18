@@ -4,4 +4,9 @@
 
 .social .container {
   outline: red 2.5px solid;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }

@@ -2,3 +2,9 @@
   outline: red 2.5px solid;
   margin-bottom: 25px;
 }
+
+.form-contacts__list {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}

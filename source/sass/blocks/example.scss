@@ -1,9 +1,25 @@
-.example__wrapper {
+.example {
   background-color: $basic_grey;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(180deg, $basic_white 50%, $basic_grey 50%, $basic_grey 100%);
+  }
+}
+
+.example .container {
+  outline: red 2.5px solid;
+}
+
+.example__wrapper {
+  @media (min-width: $desktop-width) {
+    background-color: $basic_grey;
+  }
 }
 
 .example__wrapper .container {
-  outline: red 2.5px solid;
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 }
 
 .example__info {
@@ -14,12 +30,21 @@
   th {
     @include oswald(24px, 24px);
     font-weight: 400;
+
+    @media (min-width: $tablet-width) {
+      @include oswald(30px, 37px);
+    }
   }
 
   td {
     font-size: 12px;
     line-height: 12px;
     color: $special_dark_grey;
+
+    @media (min-width: $tablet-width) {
+      font-size: 14px;
+      line-height: 14px;
+    }
   }
 }
 
@@ -27,4 +52,8 @@
 .example__price {
   @include oswald(14px, 20px);
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include oswald(20px, 20px);
+  }
 }

@@ -6,4 +6,14 @@
 .selection__tagline {
   @include oswald();
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include oswald(20px, 30px);
+  }
+}
+
+.selection__lists {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 }

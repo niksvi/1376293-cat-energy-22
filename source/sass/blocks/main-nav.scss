@@ -3,4 +3,26 @@
   font-weight: 500;
   text-transform: uppercase;
   color: $basic_black;
+
+  @media (min-width: $tablet-width) {
+    @include oswald(18px, 24px);
+    font-weight: 400;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include oswald(20px, 30px);
+    color: $basic_white;
+  }
+}
+
+.main-nav__item--form-page a {
+  @media (min-width: $desktop-width) {
+    color: $special_black;
+  }
+}
+
+.main-nav__toggle {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }

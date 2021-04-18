@@ -3,6 +3,21 @@
   margin-bottom: 40px;
 }
 
+.order__list {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 247px);
+    grid-template-rows: repeat(2, 280px);
+    gap: 37px 140px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 247px);
+    grid-template-rows: 280px;
+    gap: 0 77px;
+  }
+}
+
 .order__item {
   color: $special_dark-grey;
 }

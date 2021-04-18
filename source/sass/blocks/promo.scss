@@ -11,20 +11,45 @@
     height: 302px;
     z-index: -1;
   }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .promo__wrapper {
   outline: red 2.5px solid;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .promo__title {
   @include oswald(36px, 40px);
   font-weight: 400;
   color: $basic_white;
+
+  @media (min-width: $tablet-width) {
+    @include oswald(60px, 60px);
+    color: $basic_black;
+  }
 }
 
 .promo__tagline {
   @include oswald(14px, 14px);
   text-transform: uppercase;
   color: $basic_white;
+
+  @media (min-width: $tablet-width) {
+    @include oswald(20px, 20px);
+    color: $basic_black;
+  }
+}
+
+.promo__image {
+  order: 1;
 }

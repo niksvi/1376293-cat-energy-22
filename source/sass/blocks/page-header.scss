@@ -1,8 +1,30 @@
 .page-header__wrapper {
   outline: red 2.5px solid;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+.page-header__logo {
+  &::after {
+    content: "";
+    position: absolute;
+    left: calc(50% - 50px);
+    top: 10px;
+    width: 101px;
+    height: 18px;
+    background-image: url(../../img/decor/footer-logo.svg);
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      left: 80px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 170px;
+    }
   }
 }

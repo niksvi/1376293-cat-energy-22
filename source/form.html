@@ -22,14 +22,14 @@
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="index.html">Главная</a>
+          <li class="main-nav__item main-nav__item--form-page">
+            <a class="main-nav__link" href="index.html">Главная</a>
           </li>
-          <li class="main-nav__item">
-            <a href="catalog.html">Каталог продукции</a>
+          <li class="main-nav__item main-nav__item--form-page">
+            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="main-nav__item main-nav__item--current">
-            <a>Подбор программы</a>
+          <li class="main-nav__item main-nav__item--form-page main-nav__item--current">
+            <a class="main-nav__link">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -43,34 +43,37 @@
       <section class="selection">
         <h1 class="main-title">Подбор программы</h1>
         <p class="selection__tagline">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-        <ul class="selection__bio-list">
-          <li class="selection__bio-item">
-            <input class="form-input" type="text" name="bio-name" id="form-name" placeholder="Барсик">
-            <label for="form-name">Имя:*</label>
-          </li>
-          <li class="selection__bio-item">
-            <input class="form-input" type="number" name="bio-weight" id="form-weight" placeholder="7">
-            <label for="form-weight">Вес (кг):*</label>
-          </li>
-          <li class="selection__bio-item">
-            <input class="form-input" type="number" name="bio-age" id="form-age" placeholder="7">
-            <label for="form-age">Возраст (лет):*</label>
-          </li>
-        </ul>
-        <ul class="selection__choice-list">
-          <li class="selection__choise-item">
-            <input class="form-input form-radio" type="radio" name="choise-radio" id="radio-slim" value="slim" checked>
-            <label for="radio-slim">Похудение</label>
-          </li>
-          <li class="selection__choise-item">
-            <input class="form-input form-radio" type="radio" name="choise-radio" id="radio-pro" value="pro">
-            <label for="radio-pro">Набор массы</label>
-          </li>
-          <li class="selection__choise-item">
-            <input class="form-input form-radio" type="radio" name="choise-radio" id="radio-idk" value="idk">
-            <label for="radio-idk">Не знаю (нужен ваш совет)</label>
-          </li>
-        </ul>
+        <div class="selection__lists">
+          <ul class="selection__bio-list">
+            <li class="selection__bio-item">
+              <input class="form-input" type="text" name="bio-name" id="form-name" placeholder="Барсик">
+              <label for="form-name">Имя:*</label>
+            </li>
+            <li class="selection__bio-item">
+              <input class="form-input" type="number" name="bio-weight" id="form-weight" placeholder="7">
+              <label for="form-weight">Вес (кг):*</label>
+            </li>
+            <li class="selection__bio-item">
+              <input class="form-input" type="number" name="bio-age" id="form-age" placeholder="7">
+              <label for="form-age">Возраст (лет):*</label>
+            </li>
+          </ul>
+          <ul class="selection__choice-list">
+            <li class="selection__choise-item">
+              <input class="form-input form-radio" type="radio" name="choise-radio" id="radio-slim" value="slim"
+                checked>
+              <label for="radio-slim">Похудение</label>
+            </li>
+            <li class="selection__choise-item">
+              <input class="form-input form-radio" type="radio" name="choise-radio" id="radio-pro" value="pro">
+              <label for="radio-pro">Набор массы</label>
+            </li>
+            <li class="selection__choise-item">
+              <input class="form-input form-radio" type="radio" name="choise-radio" id="radio-idk" value="idk">
+              <label for="radio-idk">Не знаю (нужен ваш совет)</label>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="form-contacts">

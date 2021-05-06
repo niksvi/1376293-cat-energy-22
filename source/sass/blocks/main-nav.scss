@@ -1,4 +1,26 @@
-.main-nav__item a {
+.main-nav__list {
+  margin-top: 22px;
+}
+
+.main-nav__item {
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: $special_grey-2;
+    }
+    padding: 22px;
+    text-align: center;
+  }
+}
+
+.main-nav__link {
   @include oswald(20px);
   font-weight: 500;
   text-transform: uppercase;
@@ -22,6 +44,32 @@
 }
 
 .main-nav__toggle {
+  position: absolute;
+  top: 10px;
+  right: 13px;
+  width: 17px;
+  height: 17px;
+  border: none;
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 20px;
+    height: 1.5px;
+    background-color: $basic_black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
   @media (min-width: $tablet-width) {
     display: none;
   }

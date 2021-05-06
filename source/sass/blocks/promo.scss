@@ -21,6 +21,7 @@
 
 .promo__wrapper {
   outline: red 2.5px solid;
+  background-image: url("../../img/decor/index-background.png");
 
   @media (min-width: $tablet-width) {
     display: flex;

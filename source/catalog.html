@@ -22,14 +22,14 @@
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="index.html">Главная</a>
+          <li class="main-nav__item main-nav__item--other-page">
+            <a class="main-nav__link" href="index.html">Главная</a>
           </li>
-          <li class="main-nav__item main-nav__item--current">
-            <a>Каталог продукции</a>
+          <li class="main-nav__item main-nav__item--other-page main-nav__item--current">
+            <a class="main-nav__link">Каталог продукции</a>
           </li>
-          <li class="main-nav__item">
-            <a href="form.html">Подбор программы</a>
+          <li class="main-nav__item main-nav__item--other-page">
+            <a class="main-nav__link" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -203,7 +203,7 @@
           <a class="button" href="#">Заказать</a>
         </li>
         <li class="catalog__last-item">
-          <h3 class="catalog__title">Показать еще 100500 товаров</h3>
+          <h3 class="catalog__title--last-item">Показать еще 100500 товаров</h3>
           <p class="catalog__info">На самом деле вкусов гораздо больше!</p>
           <a class="button catalog__button--more" href="#">Показать все</a>
         </li>
@@ -212,40 +212,42 @@
 
     <section class="add-goods container">
       <h2 class="subtitle">Дополнительные товары</h2>
-      <ul class="add-goods__list">
-        <li class="add-goods__item">
-          <h3 class="add-goods__title">Сахарозаменитель</h3>
-          <p class="add-goods__quantity">1 упаковка (100г)</p>
-          <p class="add-goods__price">200 Р.</p>
-          <a class="button add-goods__button" href="#">Заказать</a>
-        </li>
-        <li class="add-goods__item">
-          <h3 class="add-goods__title">Питьевая вода</h3>
-          <p class="add-goods__quantity">5 литров</p>
-          <p class="add-goods__price">50 Р.</p>
-          <a class="button add-goods__button" href="#">Заказать</a>
-        </li>
-        <li class="add-goods__item">
-          <h3 class="add-goods__title">Молоко</h3>
-          <p class="add-goods__quantity">1 литр</p>
-          <p class="add-goods__price">100 Р.</p>
-          <a class="button add-goods__button" href="#">Заказать</a>
-        </li>
-        <li class="add-goods__item">
-          <h3 class="add-goods__title">Витамины</h3>
-          <p class="add-goods__quantity">1 упаковка (30г)</p>
-          <p class="add-goods__price">300 Р.</p>
-          <a class="button add-goods__button" href="#">Заказать</a>
-        </li>
-      </ul>
-      <article class="gift">
-        <div class="gift__icon"></div>
-        <p class="gift__text">
-          Закажите все <br>
-          и получите чехол для
-          кота в подарок!
-        </p>
-      </article>
+      <div class="add-goods__wrapper">
+        <ul class="add-goods__list">
+          <li class="add-goods__item">
+            <h3 class="add-goods__title">Сахарозаменитель</h3>
+            <p class="add-goods__quantity">1 упаковка (100г)</p>
+            <p class="add-goods__price">200 Р.</p>
+            <a class="button add-goods__button" href="#">Заказать</a>
+          </li>
+          <li class="add-goods__item">
+            <h3 class="add-goods__title">Питьевая вода</h3>
+            <p class="add-goods__quantity">5 литров</p>
+            <p class="add-goods__price">50 Р.</p>
+            <a class="button add-goods__button" href="#">Заказать</a>
+          </li>
+          <li class="add-goods__item">
+            <h3 class="add-goods__title">Молоко</h3>
+            <p class="add-goods__quantity">1 литр</p>
+            <p class="add-goods__price">100 Р.</p>
+            <a class="button add-goods__button" href="#">Заказать</a>
+          </li>
+          <li class="add-goods__item">
+            <h3 class="add-goods__title">Витамины</h3>
+            <p class="add-goods__quantity">1 упаковка (30г)</p>
+            <p class="add-goods__price">300 Р.</p>
+            <a class="button add-goods__button" href="#">Заказать</a>
+          </li>
+        </ul>
+        <article class="gift">
+          <div class="gift__icon"></div>
+          <p class="gift__text">
+            Закажите все <br>
+            и получите чехол для
+            кота в подарок!
+          </p>
+        </article>
+      </div>
     </section>
 
   </main>

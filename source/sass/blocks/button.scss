@@ -4,8 +4,23 @@
   color: $basic_white;
   background-color: $basic_green;
   border: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+
+  @media (max-width: $mobile-width-only) {
+    padding: 11px 44px;
+  }
 
   @media (min-width: $tablet-width) {
     @include oswald(20px, 20px);
+  }
+
+  &:hover {
+    background-color: $basic_green-2;
+  }
+
+  &:active {
+    color: rgba($basic_white, 0.3);
   }
 }

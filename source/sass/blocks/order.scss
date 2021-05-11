@@ -1,14 +1,29 @@
 .order {
-  outline: red 2.5px solid;
-  margin-bottom: 40px;
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid $special_grey-2;
+  }
+
+  @media (min-width: $desktop-width) {
+    border: none;
+  }
 }
 
 .order__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 7px;
+  padding-bottom: 20px;
+  counter-reset: section;
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 247px);
     grid-template-rows: repeat(2, 280px);
-    gap: 37px 140px;
+    gap: 37px 137px;
+    padding: 0;
+    padding-bottom: 7px;
+    margin-top: 70px;
   }
 
   @media (min-width: $desktop-width) {
@@ -20,4 +35,76 @@
 
 .order__item {
   color: $special_dark-grey;
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: relative;
+
+    &::after {
+      counter-increment: section;
+      content: counter(section);
+      position: absolute;
+      left: 115px;
+      top: 92px;
+      z-index: -1;
+      color: $basic_grey;
+
+      @include oswald(280px);
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    flex-shrink: 0;
+    background-color: $basic_green;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 35px;
+    }
+  }
+
+  &--1 {
+    &::before {
+      background-image: url("../../img/decor/1.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--2 {
+    &::before {
+      background-image: url("../../img/decor/2.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--3 {
+    &::before {
+      background-image: url("../../img/decor/3.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--4 {
+    &::before {
+      background-image: url("../../img/decor/4.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+.order__text {
+  margin: 0;
 }

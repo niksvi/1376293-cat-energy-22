@@ -1,42 +1,74 @@
 .promo {
-  margin-bottom: 22px;
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    background-color: $basic_green;
-    opacity: 0.85;
-    width: 100%;
-    height: 302px;
-    z-index: -1;
-  }
+  margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
-    &::before {
-      display: none;
-    }
+    width: 708px;
+    margin: 0 auto;
+    margin-bottom: 7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    padding-bottom: 50px;
+    margin-bottom: 83px;
+  }
+}
+
+.promo__background {
+  @media (max-width: $mobile-width-only) {
+    height: 302px;
+    width: 100%;
+    background-color: #65a83c;
+    background-image: url("../../img/decor/index-background.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
   }
 }
 
 .promo__wrapper {
-  outline: red 2.5px solid;
-  background-image: url("../../img/decor/index-background.png");
-
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
+    margin-left: 87px;
+    width: 450px;
+    margin-bottom: -6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 80px;
+  }
+
+  .container {
+    @media (min-width: $tablet-width) {
+      width: 458px;
+      padding: 0;
+      order: 1;
+      z-index: -1;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 1220px;
+      z-index: 0;
+    }
   }
 }
 
 .promo__title {
-  @include oswald(36px, 40px);
+  @include oswald(36px, 37px);
   font-weight: 400;
   color: $basic_white;
+  text-align: center;
+  padding-top: 25px;
 
   @media (min-width: $tablet-width) {
     @include oswald(60px, 60px);
     color: $basic_black;
+    text-align: left;
+    padding-top: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 60px;
   }
 }
 
@@ -44,13 +76,42 @@
   @include oswald(14px, 14px);
   text-transform: uppercase;
   color: $basic_white;
+  text-align: center;
+  margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
     @include oswald(20px, 20px);
     color: $basic_black;
+    text-align: left;
+    margin-bottom: 50px;
   }
 }
 
 .promo__image {
-  order: 1;
+  margin-top: -135px;
+
+  @media (min-width: $tablet-width) {
+    height: 600px;
+    width: 630px;
+    margin-top: -80px;
+    margin-left: -10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -365px;
+    margin-left: 407px;
+    width: 500px;
+    height: 500px;
+  }
+}
+
+.promo__button {
+  max-width: 190px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 17px 26px;
+    margin-left: 0;
+    max-width: 250px;
+  }
 }

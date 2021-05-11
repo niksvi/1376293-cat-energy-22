@@ -1,22 +1,39 @@
 .contacts {
-  outline: red 2.5px solid;
   background-color: $basic_white;
+  display: flex;
+  padding-top: 12px;
+  padding-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+    padding-top: 46px;
+    padding-left: 30px;
+    padding-bottom: 42px;
+  }
 
   @media (min-width: $desktop-width) {
     position: absolute;
     left: calc(50% - 1220px / 2);
-    top: 100px;
-    width: 300px;
+    top: 93px;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 570px;
   }
 }
 
 .contacts__tagline {
-  @include oswald(16px);
+  @include oswald(16px, 20px);
   text-transform: uppercase;
   color: $special_black;
 
   @media (min-width: $tablet-width) {
-    @include oswald(20px, 21px);
+    @include oswald(20px, 24px);
+    width: 170px;
+    margin-left: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 75px;
   }
 }
 
@@ -24,8 +41,26 @@
   line-height: 20px;
   font-style: normal;
   color: $special_dark_grey;
+  margin-top: 15px;
+  width: 190px;
+
+
+  @media (max-width: $mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
-    @include oswald(16px, 20px);
+    font-size: 16px;
+    line-height: 21px;
+    width: 160px;
+    text-align: right;
+    margin-right: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin-right: 85px;
   }
 }

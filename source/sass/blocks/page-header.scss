@@ -2,28 +2,52 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
+    width: 708px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    padding-top: 53px;
   }
 }
 
 .page-header__logo {
+  display: block;
+  padding-top: 12px;
+  padding-left: 20px;
+  margin-bottom: -12px;
+
   &::after {
     content: "";
     position: absolute;
     left: calc(50% - 50px);
-    top: 10px;
+    top: 25px;
     width: 101px;
     height: 18px;
-    background-image: url(../../img/decor/footer-logo.svg);
+    background-image: url("../../img/decor/footer-logo.svg");
     background-repeat: no-repeat;
 
     @media (min-width: $tablet-width) {
-      left: 80px;
+      left: 72px;
+      top: 44px;
     }
 
     @media (min-width: $desktop-width) {
-      left: 170px;
+      left: 90px;
+      top: 77px;
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 25px;
   }
 }

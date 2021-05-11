@@ -1,5 +1,6 @@
 .header-wrapper {
-  @media (min-width: $desktop_width) {
-    background: linear-gradient(90deg, $basic_white 50%, rgba($basic_green, 0.85) 50%, rgba($basic_green, 0.85) 100%);
+  @media (min-width: $desktop-width) {
+    background: url("../../img/decor/index-background-desktop.jpg") no-repeat top right;
+    background-size: 50% 696px;
   }
 }

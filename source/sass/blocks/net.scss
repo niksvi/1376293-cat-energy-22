@@ -1,3 +1,32 @@
+.net {
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 13px 0;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    margin-left: 25px;
+  }
+}
+
 .net__list {
   display: flex;
+  padding: 0 59px;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: 130px;
+    padding: 40px 0;
+  }
+}
+
+.net__link {
+  svg {
+    width: 69%;
+
+    @media (min-width: $tablet-width) {
+      width: 100%;
+    }
+  }
 }

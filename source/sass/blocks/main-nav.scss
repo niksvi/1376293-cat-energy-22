@@ -1,22 +1,38 @@
 .main-nav__list {
-  margin-top: 22px;
+  margin-top: 23px;
+  margin-bottom: -26px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    margin-top: 17px;
+  }
 }
 
 .main-nav__item {
   @media (max-width: $mobile-width-only) {
     position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 2px;
-      width: 100%;
-      background-color: $special_grey-2;
-    }
+    border-top: 1px solid $special_grey-2;
     padding: 22px;
     text-align: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 35px;
+    padding-bottom: 4px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &--current {
+    @media (min-width: $tablet-width) {
+      border-bottom: 2px solid $basic_green;
+    }
+
+    @media (min-width: $desktop-width) {
+      border-color: $basic_white;
+    }
   }
 }
 
@@ -35,9 +51,17 @@
     @include oswald(20px, 30px);
     color: $basic_white;
   }
+
+  &[href]:hover {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
 }
 
-.main-nav__item--other-page a {
+.main-nav__item--other-page .main-nav__link {
   @media (min-width: $desktop-width) {
     color: $special_black;
   }
@@ -45,10 +69,10 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: 10px;
-  right: 13px;
-  width: 17px;
-  height: 17px;
+  top: 21px;
+  right: 21px;
+  width: 18px;
+  height: 18px;
   border: none;
   background-color: transparent;
 
@@ -57,7 +81,7 @@
     content: "";
     position: absolute;
     right: 0;
-    width: 20px;
+    width: 23px;
     height: 1.5px;
     background-color: $basic_black;
   }

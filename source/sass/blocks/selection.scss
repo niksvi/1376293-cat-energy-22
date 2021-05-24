@@ -6,9 +6,11 @@
 .selection__tagline {
   @include oswald();
   text-transform: uppercase;
+  width: 226px;
 
   @media (min-width: $tablet-width) {
     @include oswald(20px, 30px);
+    width: 323px;
   }
 }
 
@@ -16,4 +18,28 @@
   @media (min-width: $desktop-width) {
     display: flex;
   }
+}
+
+.selection__bio-item {
+  display: flex;
+
+  .selection__bio-input {
+    order: 1;
+
+    &+label {
+      min-width: max-content;
+    }
+  }
+}
+
+.selection__choice-list {
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.selection__choice-item {
+  margin-bottom: 13px;
+  padding-left: 45px;
+
+  label {}
 }

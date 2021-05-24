@@ -1,5 +1,36 @@
 .form-radio {
-  & + label {
+  &+label {
     color: $special_dark-grey-2;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    @include oswald(14px, 32px);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -42px;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid $special_grey;
+    }
+  }
+
+  &:checked {
+    &+label {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: -32px;
+        width: 13.5px;
+        height: 13.5px;
+        border-radius: 50%;
+        background-color: $basic_green;
+      }
+    }
   }
 }

@@ -1,5 +1,6 @@
 .page-header__wrapper {
   position: relative;
+  margin-bottom: -26px;
 
   @media (min-width: $tablet-width) {
     width: 708px;
@@ -13,6 +14,12 @@
   @media (min-width: $desktop-width) {
     width: 1220px;
     padding-top: 53px;
+  }
+
+  &--other-page {
+    @media (max-width: $mobile-width-only) {
+      border-bottom: 1px solid $special_grey-2;
+    }
   }
 }
 

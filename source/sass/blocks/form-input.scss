@@ -1,5 +1,6 @@
 .form-input {
-  & + label,
+
+  &+label,
   &::placeholder {
     @include oswald();
     text-transform: uppercase;
@@ -7,6 +8,14 @@
 
     @media (min-width: $tablet-width) {
       @include oswald(20px, 30px);
+    }
+  }
+
+  &:not([type='radio']):not([type='checkbox']) {
+    width: 100%;
+
+    &+label {
+      margin-right: 10px;
     }
   }
 }

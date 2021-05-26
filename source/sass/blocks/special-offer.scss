@@ -1,0 +1,93 @@
+.special-offer {
+  text-align: center;
+  padding-top: 58px;
+  padding-bottom: 43px;
+  --bg-basic-o: 0.85;
+  --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
+  background-color: var(--bg-basic);
+  background-image: url("../../img/common/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/common/gift-photo-mobile@2x.jpg");
+    background-size: cover;
+  }
+
+  @media (min-width: 768px) {
+    position: relative;
+    margin-top: 69px;
+    padding-top: 71px;
+    padding-right: 17.51%;
+    padding-bottom: 69px;
+    background-image: url("../../img/common/gift-photo-tablet@1x.jpg");
+  }
+
+  @media (min-width: 768px) and (min-resolution: 2dppx) {
+    background-image: url("../../img/common/gift-photo-tablet@2x.jpg");
+  }
+
+  @media (min-width: 1280px) {
+    background-image: url("../../img/common/gift-photo-desktop@1x.jpg");
+    background-size: cover;
+    margin-top: 0;
+    padding-top: 56px;
+    padding-bottom: 42px;
+  }
+
+  @media (min-width: 1280px) and (min-resolution: 2dppx) {
+    background-image: url("../../img/common/gift-photo-desktop@2x.jpg");
+  }
+}
+
+.special-offer__text {
+  --basic-l: 100%;
+  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
+  color: var(--basic);
+  font-size: 16px;
+  line-height: 20 / 16 * 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 161px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    margin: 0 0 0 auto;
+    text-align: left;
+  }
+
+  @media (min-width: 1280px) {
+    height: 100%;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: baseline;
+    width: 78px;
+    height: 80px;
+    margin-bottom: 48px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../img/stack.svg#icon-gift");
+
+    @media (min-width: 768px) {
+      position: absolute;
+      left: 10.87%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 80px;
+      height: 83px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 1280px) {
+      position: static;
+      transform: initial;
+    }
+  }
+}

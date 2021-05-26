@@ -1,0 +1,18 @@
+.link {
+  z-index: 1;
+  text-decoration: none;
+
+  &:focus {
+    outline: 2px solid hsl(0, 0%, 27%);
+    outline-offset: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid hsl(0, 0%, 27%);
+    outline-offset: 2px;
+  }
+}

@@ -1,20 +1,52 @@
 .social {
-  background-color: $basic_grey;
-  margin-top: -4px;
+  --border-color: 85%;
+  --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
+  width: 100%;
+  padding: 22px 0;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  column-gap: 34px;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 
-  @media (min-width: $tablet-width) {
-    margin-top: -6px;
+
+  @media (min-width: 768px) {
+    border: none;
+    width: auto;
+    flex-grow: 1;
+    padding: 0;
+    column-gap: 30px;
+
+    .icon--vk::before {
+      width: 29px;
+      height: 17px;
+    }
+
+    .icon--inst::before {
+      width: 23px;
+      height: 23px;
+    }
+
+    .icon--fb::before {
+      width: 13px;
+      height: 27px;
+    }
   }
 }
 
-.social__list {
-  text-align: center;
-  padding-top: 9px;
 
-  @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 0;
+.social__link {
+  ::before {
+    transition: background-color 0.3s;
+  }
+
+  &:hover ::before {
+    --icon-color: hsl(97deg 53% 47%);
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

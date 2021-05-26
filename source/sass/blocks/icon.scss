@@ -1,0 +1,117 @@
+.icon {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  --icon-color: hsl(0deg 0% 0%);
+  mask-size: cover;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background-color: var(--icon-color);
+  transition: background-color 0.2s;
+}
+
+.icon--bg {
+  height: 60px;
+  width: 60px;
+  --bg-basic-h: 97deg;
+  --bg-basic-s: 53%;
+  --bg-basic-l: 47%;
+  --basic-o: 1;
+  --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
+  background-color: var(--bg-basic);
+}
+
+.icon--bg-round {
+  border-radius: 50%;
+}
+
+.icon--phone::before {
+  width: 20px;
+  height: 20px;
+  mask-image: url("../../img/stack.svg#phone");
+}
+
+.icon--email::before {
+  width: 18px;
+  height: 13px;
+  mask-image: url("../../img/stack.svg#email");
+}
+
+.icon--cat-slim::before {
+  width: 36px;
+  height: 50px;
+  margin-top: -3px;
+  mask-image: url("../../img/stack.svg#cat-slim");
+}
+
+.icon--cat-pro::before {
+  width: 67px;
+  height: 28px;
+  mask-image: url("../../img/stack.svg#cat-pro");
+}
+
+.icon--alarm::before {
+  width: 32px;
+  height: 33px;
+  --icon-color: hsl(0deg 0% 100%);
+  mask-image: url("../../img/stack.svg#icon-alarm");
+}
+
+.icon--eat::before {
+  width: 25px;
+  height: 30px;
+  --icon-color: hsl(0deg 0% 100%);
+  mask-image: url("../../img/stack.svg#icon-eat");
+}
+
+.icon--leaf::before {
+  width: 30px;
+  height: 32px;
+  --icon-color: hsl(0deg 0% 100%);
+  mask-image: url("../../img/stack.svg#icon-leaf");
+}
+
+.icon--tub::before {
+  width: 29px;
+  height: 31px;
+  --icon-color: hsl(0deg 0% 100%);
+  mask-image: url("../../img/stack.svg#icon-tub");
+}
+
+.icon--vk::before {
+  width: 23px;
+  height: 16px;
+  --icon-color: hsl(0deg 0% 40%);
+  mask-image: url("../../img/stack.svg#icon-vkontakte");
+}
+
+.icon--inst::before {
+  width: 16px;
+  height: 16px;
+  --icon-color: hsl(0deg 0% 40%);
+  mask-image: url("../../img/stack.svg#icon-instagram");
+}
+
+.icon--fb::before {
+  width: 22px;
+  height: 22px;
+  --icon-color: hsl(0deg 0% 40%);
+  mask-image: url("../../img/stack.svg#icon-facebook");
+}
+
+.icon--academy::before {
+  width: 27px;
+  height: 34px;
+  --icon-color: hsl(0deg 0% 40%);
+  mask-image: url("../../img/stack.svg#academy");
+}

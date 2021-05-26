@@ -1,8 +1,0 @@
-.subtitle {
-  @include oswald(24px, 26px);
-  font-weight: 400;
-
-  @media (min-width: $tablet-width) {
-    @include oswald(36px, 36px);
-  }
-}

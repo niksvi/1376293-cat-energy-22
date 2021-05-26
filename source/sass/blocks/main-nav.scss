@@ -1,99 +1,158 @@
-.main-nav__list {
-  margin-top: 23px;
+.main-nav {
+  grid-column: 1/-1;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(65px, max-content) 1fr;
+  align-items: center;
 
-  @media (min-width: $tablet-width) {
-    display: flex;
-    margin-top: 17px;
-  }
-}
-
-.main-nav__item {
-  @media (max-width: $mobile-width-only) {
-    position: relative;
-    border-top: 1px solid $special_grey-2;
-    padding: 22px;
-    text-align: center;
-  }
-
-  @media (min-width: $tablet-width) {
-    margin-right: 35px;
-    padding-bottom: 4px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &--current {
-    @media (min-width: $tablet-width) {
-      border-bottom: 2px solid $basic_green;
-    }
-
-    @media (min-width: $desktop-width) {
-      border-color: $basic_white;
-    }
-  }
-}
-
-.main-nav__link {
-  @include oswald(20px);
-  font-weight: 500;
-  text-transform: uppercase;
-  color: $basic_black;
-
-  @media (min-width: $tablet-width) {
-    @include oswald(18px, 24px);
-    font-weight: 400;
-  }
-
-  @media (min-width: $desktop-width) {
-    @include oswald(20px, 30px);
-    color: $basic_white;
-  }
-
-  &[href]:hover {
-    opacity: 0.6;
-  }
-
-  &[href]:active {
-    opacity: 0.3;
-  }
-}
-
-.main-nav__item--other-page .main-nav__link {
-  @media (min-width: $desktop-width) {
-    color: $special_black;
+  @media (min-width: 768px) {
+    display: initial;
+    grid-column: auto;
+    justify-self: end;
   }
 }
 
 .main-nav__toggle {
-  position: absolute;
-  top: 21px;
-  right: 21px;
-  width: 18px;
-  height: 18px;
+  grid-column: 3;
+  justify-self: end;
+  width: 24px;
+  height: 16px;
   border: none;
-  background-color: transparent;
+  background: transparent;
+  display: initial;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
 
   &::before,
   &::after {
     content: "";
+    width: 100%;
+    height: 2px;
+    --bg-basic-l: 0%;
+    --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
+    background-color: var(--bg-basic);
     position: absolute;
-    right: 0;
-    width: 23px;
-    height: 1.5px;
-    background-color: $basic_black;
+    left: 0;
   }
 
   &::before {
-    transform: rotate(45deg);
+    top: 0;
+    box-shadow: 0 7px 0  var(--bg-basic);
   }
 
   &::after {
-    transform: rotate(-45deg);
+    bottom: 0;
   }
 
-  @media (min-width: $tablet-width) {
+  &--close {
+    &::before {
+      transform: translateY(7px) rotateZ(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: translateY(-7px) rotateZ(-45deg);
+    }
+  }
+
+  &--hidden {
+    visibility: hidden;
+  }
+
+  @media (min-width: 768px) {
     display: none;
+  }
+}
+
+.main-nav__list {
+  grid-column: 1/-1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--accent-font);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+
+  &--close {
+    height: 0;
+
+    @media (min-width: 768px) {
+      height: auto;
+    }
+  }
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24 / 18 * 1;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 24px;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+
+.main-nav__item {
+  --border-color-l: 90%;
+  --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
+  margin: 0 -20px;
+  padding-top: 21px;
+  padding-bottom: 24px;
+  border-top: 1px solid var(--border-color);
+
+  @media (min-width: 768px) {
+    border: none;
+    margin: auto;
+    padding-top: 17px;
+    padding-bottom: 19px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
+
+.main-nav__link {
+  --basic-l: 0%;
+  --basic: hsl(var(--basic-h) var(--basic-s) var(--basic-l) / var(--basic-o));
+  color: var(--basic);
+
+  &:hover {
+    --basic-o: 0.6;
+  }
+
+  &:active {
+    --basic-o: 0.3;
+  }
+
+  @media (min-width: 768px) {
+    position: relative;
+
+    &[aria-current] {
+      --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
+      text-decoration: underline 2px var(--bg-basic);
+      text-underline-offset: 12px;
+    }
+  }
+
+  &--accent {
+    @media (min-width: 1280px) {
+      --basic-l: 100%;
+
+      &[aria-current] {
+        --bg-basic-l: 100%;
+        text-underline-offset: 11px;
+      }
+    }
   }
 }

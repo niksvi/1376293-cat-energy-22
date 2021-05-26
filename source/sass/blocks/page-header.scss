@@ -1,60 +1,74 @@
-.page-header__wrapper {
-  position: relative;
-  margin-bottom: -26px;
+.page-header {
+  --border-color-l: 90%;
+  --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid var(--border-color);
 
-  @media (min-width: $tablet-width) {
-    width: 708px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+  @media (min-width: 768px) {
+    border: none;
     padding-top: 25px;
     padding-bottom: 25px;
+    align-items: center;
+    grid-template-columns: max-content 1fr;
   }
 
-  @media (min-width: $desktop-width) {
-    width: 1220px;
+  @media (min-width: 1280px) {
     padding-top: 53px;
+    padding-bottom: 25px;
   }
+}
 
-  &--other-page {
-    @media (max-width: $mobile-width-only) {
-      border-bottom: 1px solid $special_grey-2;
+.page-header__wrapper {
+  grid-column: 1/-1;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(66px, max-content) 1fr;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    display: initial;
+    grid-column: auto;
+  }
+}
+
+.page-header__logo-image {
+  justify-self: start;
+
+  &[href] {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
     }
   }
 }
 
-.page-header__logo {
-  display: block;
-  padding-top: 12px;
-  padding-left: 20px;
-  margin-bottom: -12px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: calc(50% - 50px);
-    top: 25px;
-    width: 101px;
-    height: 18px;
-    background-image: url("../../img/decor/footer-logo.svg");
-    background-repeat: no-repeat;
-
-    @media (min-width: $tablet-width) {
-      left: 72px;
-      top: 44px;
-    }
-
-    @media (min-width: $desktop-width) {
-      left: 90px;
-      top: 77px;
-    }
+.page-header__logo-image img {
+  @media (min-width: 768px) {
+    width: 174px;
+    height: 52px;
   }
 
-  @media (min-width: $tablet-width) {
-    padding-left: 15px;
+  @media (min-width: 1280px) {
+    width: 202px;
+    height: 59px;
   }
+}
 
-  @media (min-width: $desktop-width) {
-    padding-left: 25px;
+.page-header__logo-text {
+  justify-self: center;
+
+  @media (min-width: 768px) {
+    display: none;
   }
+}
+
+.page-header__logo-text img {
+  vertical-align: middle;
 }

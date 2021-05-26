@@ -1,42 +1,28 @@
-// helper
-@import "veriables.scss";
-@import "global.scss";
-@import "fonts.scss";
-
-//header
-@import "blocks/page-header.scss";
-@import "blocks/main-nav.scss";
-@import "blocks/main-title.scss";
-
-//index
-@import "blocks/header-wrapper.scss";
-@import "blocks/promo.scss";
-@import "blocks/button.scss";
-@import "blocks/features.scss";
-@import "blocks/order.scss";
-@import "blocks/result.scss";
-@import "blocks/example.scss";
-
-//footer
-@import "blocks/page-footer.scss";
-@import "blocks/contacts.scss";
-@import "blocks/map.scss";
-@import "blocks/social.scss";
-@import "blocks/footer-logo.scss";
-@import "blocks/net.scss";
-@import "blocks/copyright.scss";
-
-//form
-@import "blocks/selection.scss";
-@import "blocks/form-input.scss";
-@import "blocks/form-radio.scss";
-@import "blocks/subtitle.scss";
-@import "blocks/form-checkbox.scss";
-@import "blocks/form-contacts.scss";
-@import "blocks/comment.scss";
-@import "blocks/extra.scss";
-
-//catalog
-@import "blocks/catalog.scss";
-@import "blocks/add-goods.scss";
-@import "blocks/gift.scss";
+@import "./global/fonts.scss";
+@import "./global/variables.scss";
+@import "./blocks/content.scss";
+@import "./blocks/link.scss";
+@import "./blocks/button.scss";
+@import "./blocks/page.scss";
+@import "./blocks/main-title.scss";
+@import "./blocks/page-header.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/promo.scss";
+@import "./blocks/icon.scss";
+@import "./blocks/offers.scss";
+@import "./blocks/description.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/example.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/feedback.scss";
+@import "./blocks/form.scss";
+@import "./blocks/cross-line.scss";
+@import "./blocks/radio-group.scss";
+@import "./blocks/checkbox-group.scss";
+@import "./blocks/products.scss";
+@import "./blocks/product-card.scss";
+@import "./blocks/additional.scss";
+@import "./blocks/special-offer.scss";
+@import "./blocks/map.scss";
+@import "./blocks/main-footer.scss";
+@import "./blocks/social.scss";

@@ -1,0 +1,93 @@
+.products__title {
+  margin-top: 26px;
+
+  @media (min-width: 768px) {
+    margin-top: 31px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-top: 43px;
+  }
+}
+
+.products__list {
+  margin: 41px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 140px;
+    margin-top: 164px;
+  }
+
+  @media (min-width: 1280px) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+    row-gap: 143px;
+    margin-top: 166px;
+  }
+}
+
+.products__item {
+  --bg-basic-h: 0;
+  --bg-basic-s: 0%;
+  --bg-basic-l: 100%;
+  --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
+  background-color: var(--bg-basic);
+  margin: 0 -20px;
+  --border-color-l: 92%;
+  --border-color: hsl(var(--border-color-h) var(--border-color-s) var(--border-color-l) / var(--border-color-o));
+  border-top: 1px solid var(--border-color);
+  padding: 20px 20px 24px;
+
+  @media (min-width: 768px) {
+    margin: 0;
+    padding: 161px 36px 40px;
+    border: none;
+    --bg-basic-l: 95%;
+  }
+
+  @media (min-width: 1280px) {
+    padding-left: 35px;
+    padding-right: 30px;
+  }
+
+  &--more {
+    @media (max-width: 767px) {
+      border-bottom: 1px solid var(--border-color);
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      --bg-basic-l: 100%;
+      border: 2px solid var(--border-color);
+      position: relative;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin-top: 6px;
+      margin-bottom: 15px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("../../img/stack.svg#plus");
+
+      @media (min-width: 768px) {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 53px;
+        left: 50%;
+        margin: 0;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

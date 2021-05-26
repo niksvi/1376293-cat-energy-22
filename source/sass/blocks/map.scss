@@ -1,9 +1,8 @@
-.map iframe {
-  width: 100%;
+.map {
   height: 362px;
-  border: none;
+  width: 100%;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: 768px) {
     height: 400px;
   }
 }

@@ -1,0 +1,37 @@
+.cross-line {
+  position: relative;
+
+  @media (min-width: 768px) {
+    margin-top: 6px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-top: 8px;
+  }
+
+  &::after {
+    --bg-basic: hsl(var(--bg-basic-h) var(--bg-basic-s) var(--bg-basic-l) / var(--bg-basic-o));
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 15px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--bg-basic);
+
+    @media (min-width: 768px) {
+      top: 22px;
+    }
+  }
+
+  &--owner {
+    @media (min-width: 768px) {
+      margin-top: 18px;
+    }
+
+    @media (min-width: 1280px) {
+      margin-top: 14px;
+    }
+  }
+}
